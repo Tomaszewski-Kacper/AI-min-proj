@@ -1,0 +1,26 @@
+var PianoList = ["Sounds/Piano/A4.mp3","Sounds/Piano/B4.mp3","Sounds/Piano/C4.mp3","Sounds/Piano/D4.mp3","Sounds/Piano/E4.mp3","Sounds/Piano/F4.mp3","Sounds/Piano/G4.mp3"]
+var PianoSounds = document.querySelectorAll(".Button")
+//Usuwanie
+/*if(x>=7)
+  {
+    for(let i=0; i<PianoSounds.length; i++)
+      {
+        PianoSounds[i].removeEventListener("", Graj, false);
+        x=0; 
+      }
+  }*/
+
+for(let i=0; i<PianoSounds.length; i++)
+{
+  var Graj = function()
+  {
+    let Piano = new Audio(PianoList[i])
+    Piano.play();
+  }
+  PianoSounds[i].addEventListener("click", Graj, false);
+  //x++;
+}
+
+
+
+

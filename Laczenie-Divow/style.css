@@ -1,0 +1,26 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+canvas
+{
+z-index: -1;
+position: absolute;
+top: 0;
+left: 0;
+}
+div
+{
+    height: 200px;
+    width: 200px;
+    border: solid 1px black;
+}
+footer
+{
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}

@@ -1,0 +1,125 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    --gold: #BF953F;
+    --lightGold:#FCF6BA;
+    --lightBlack: #000000;
+    --black:#040404;
+}
+body
+{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background-image: url("../Img/background.png");
+}
+
+/*Pasek Nawigacyjny*/
+.nav 
+{
+    height: 60px;
+    background-color: #8B939A;
+    background-image: linear-gradient(147deg, #8B939A 50%, #BF953F 50%);
+    
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav a 
+{
+    color: black;
+    text-align: center;
+    margin: 30px;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 28px;
+    line-height: 60px;
+}
+.nav a:hover
+{
+    color: white;
+}
+.nav p
+{
+    display: inline-block;
+}
+/*Footer*/
+footer
+{
+    height: 100px;
+    background-color: #8B939A;
+    background-image: linear-gradient(147deg, #8B939A 50%, #BF953F 50%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-direction: row;
+}
+.description
+{
+    width: 395px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 10px;
+}
+.description h1
+{
+    font-size: 22px;
+}
+.description1 
+{
+    width: 395px;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+ul
+{
+    list-style: none;
+}
+@media only screen and (max-width: 888px) 
+{
+    .nav p
+    {
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .nav
+    {
+        height: 90px;
+    }
+}
+@media only screen and (max-width: 838px) 
+{
+    footer
+    {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        overflow: scroll;
+        background-color: black;
+        background-image: none;
+        color: white;
+    }
+    .description
+    {
+        margin-top: 80px;
+    }
+    .nav
+    {
+
+        background-color: white;
+        background-image: none;
+    }
+}

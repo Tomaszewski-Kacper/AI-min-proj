@@ -1,0 +1,28 @@
+var UkuleleList = ["Sounds/Ukulele/A.wav","Sounds/Ukulele/B.wav","Sounds/Ukulele/C.wav","Sounds/Ukulele/D.wav","Sounds/Ukulele/E.wav","Sounds/Ukulele/F.wav","Sounds/Ukulele/G.wav"]
+var UkuleleSounds = document.querySelectorAll(".Button")
+//Usuwanie
+/*if(x>=7)
+  {
+    for(let i=0; i<UkuleleSounds.length; i++)
+      {
+        UkuleleSounds[i].removeEventListener("", Graj, false);
+        x=0; 
+      }
+  }*/
+  
+for(let i=0; i<UkuleleSounds.length; i++)
+{
+  var Graj = function()
+  {
+    let Ukulele = new Audio(UkuleleList[i])
+    Ukulele.play();
+  }
+    UkuleleSounds[i].addEventListener("click", Graj, false);
+    //x++;
+}
+
+
+
+
+
+

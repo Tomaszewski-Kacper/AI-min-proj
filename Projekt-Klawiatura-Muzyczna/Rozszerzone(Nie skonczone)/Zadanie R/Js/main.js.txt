@@ -1,0 +1,44 @@
+let init = (e) => {
+    var piano = document.createElement('script');
+    piano.src = "Js/script.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(piano, s);
+};
+
+var Instrument = document.querySelectorAll("input[type=radio]");
+var PianoButton = document.getElementById('Piano');
+var UkuleleButton = document.getElementById('Ukulele');
+//var x = 0;
+for(let i=0; i<Instrument.length; i++)
+{
+    Instrument[i].addEventListener("click", function()
+    {
+        if(Instrument[i].value == "Piano"){
+            var pianinoLen = document.querySelectorAll("script[src='Js/script.js']");
+            var ukuleleLen = document.querySelectorAll("script[src='Js/Ukulele.js']");
+        
+                if(pianinoLen.length == 0 ){
+                 if(ukuleleLen.length >= 1 && ukuleleLen.length != null){ukuleleLen[0].parentNode.removeChild(ukuleleLen[0]);}
+                 var piano = document.createElement('script');
+                 piano.src = "Js/script.js";
+                 var s = document.getElementsByTagName('script')[0]; 
+                 s.parentNode.insertBefore(piano, s);
+                }
+            }
+        else if(Instrument[i].value == "Ukulele"){
+
+         var pianinoLen = document.querySelectorAll("script[src='Js/script.js']");
+         var ukuleleLen = document.querySelectorAll("script[src='Js/Ukulele.js']");
+
+         if(ukuleleLen.length == 0 )
+            {
+             if(pianinoLen.length >= 1 && ukuleleLen.length != null){pianinoLen[0].parentNode.removeChild(pianinoLen[0]);}
+                var ukulele = document.createElement('script')
+                ukulele.src = "Js/Ukulele.js";
+                var c = document.getElementsByTagName('script')[0]; 
+                c.parentNode.insertBefore(ukulele, c);
+            }
+        }
+    },false);
+  }
+  
+  window.addEventListener("load", init, false);
